@@ -6,14 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Protected by PlebPay Example</title>
+    <script src="https://www.plebpay.com/redirectIfNecessary.js" type="text/javascript"></script>
     <script>
-        const plebPayUrl = 'https://www.plebpay.com/c5bc98ff-a386-45ba-9b99-c3b16da9cdaf';
-
-        if (document.referrer !== 'https://www.plebpay.com/' && localStorage.getItem(plebPayUrl) === null) {
-          window.location = plebPayUrl
-        } else {
-          localStorage.setItem(plebPayUrl, true)
-        }
+        redirectIfNecessary('https://www.plebpay.com/c5bc98ff-a386-45ba-9b99-c3b16da9cdaf')
     </script>
 </head>
 <body style="display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: Futura, sans-serif;">
