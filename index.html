@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Protected by PlebPay Example</title>
     <script>
-        if (document.referrer !== 'https://www.plebpay.com/') {
+        const paidKey = 'isPlebPayInvoicePaid';
+
+        if (document.referrer !== 'https://www.plebpay.com/' && localStorage.getItem(paidKey) === null) {
           window.location = 'https://www.plebpay.com/c5bc98ff-a386-45ba-9b99-c3b16da9cdaf'
+        } else {
+          localStorage.setItem(paidKey, true)
         }
     </script>
 </head>
