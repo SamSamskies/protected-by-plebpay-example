@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Protected by PlebPay Example</title>
     <script>
-        const paidKey = 'isPlebPayInvoicePaid';
+        const plebPayUrl = 'https://www.plebpay.com/c5bc98ff-a386-45ba-9b99-c3b16da9cdaf';
 
-        if (document.referrer !== 'https://www.plebpay.com/' && localStorage.getItem(paidKey) === null) {
-          window.location = 'https://www.plebpay.com/c5bc98ff-a386-45ba-9b99-c3b16da9cdaf'
+        if (document.referrer !== 'https://www.plebpay.com/' && localStorage.getItem(plebPayUrl) === null) {
+          window.location = plebPayUrl
         } else {
-          localStorage.setItem(paidKey, true)
+          localStorage.setItem(plebPayUrl, true)
         }
     </script>
 </head>
